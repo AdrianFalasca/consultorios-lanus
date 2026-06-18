@@ -14,8 +14,8 @@
 <div class="logo">CL <span>Consultorios</span> Lanús</div>
 <nav id="mainNav">
 <a href="#inicio">Inicio</a>
-<a href="#consultorios">Galería</a>
-<a href="#equipamiento">Equipamiento</a>
+<a href="#consultorios">Consultorios</a>
+<a href="#equipamiento">Servicios</a>
 <a href="#reserva">Precios</a>
 <a href="#sedes">Sedes</a>
 <a href="#contacto">Contacto</a>
@@ -28,19 +28,24 @@
 <button class="drawer-close" onclick="closeMenu()">✕</button>
 <nav class="drawer-nav">
 <a href="#inicio" onclick="closeMenu()">Inicio</a>
-<a href="#consultorios" onclick="closeMenu()">Galería</a>
-<a href="#equipamiento" onclick="closeMenu()">Equipamiento</a>
+<a href="#consultorios" onclick="closeMenu()">Consultorios</a>
+<a href="#equipamiento" onclick="closeMenu()">Servicios</a>
+<div class="drawer-sep"></div>
 <a href="#reserva" onclick="closeMenu()">Precios</a>
+<div class="drawer-sep"></div>
 <a href="#sedes" onclick="closeMenu()">Sedes</a>
+<div class="drawer-sep"></div>
 <a href="#contacto" onclick="closeMenu()">Contacto</a>
+<div class="drawer-sep"></div>
 <a class="drawer-cta" href="https://wa.me/5491130409543?text=Hola, quiero consultar para reservar consultorios" onclick="closeMenu()" target="_blank">Reservar</a>
 </nav>
 </div>
 <section class="hero" id="inicio">
 <div class="hero-content">
-<div class="hero-badge">Lanús Oeste · Buenos Aires</div>
-<h1>Consultorios equipados listos para atender</h1>
-<p>Alquiler por hora · Módulos · Días · Mes</p>
+<div class="hero-badge">Lanús Oeste · Lanusita</div>
+<h1>Alquiler de consultorios</h1>
+<p style="font-weight:500;">Hora · Módulo · Día · mes</p>
+<p >Habilitados para psicólogos, psiquiátras, psicopedagogas, nutricionistas, depilación definitiva, etc</p>
 <div class="hero-btns">
 <a class="btn-primary" href="https://wa.me/5491130409543?text=Hola, quiero consultar por la disponibilidad de los consultorios" target="_blank">Consultar disponibilidad</a>
 <a class="btn-outline" href="#consultorios">Ver consultorios</a>
@@ -48,49 +53,61 @@
 </div>
 </section>
 <div class="stats-bar">
-<div class="stat-item stagger-item"><span class="stat-num">9</span><span class="stat-label">Consultorios</span></div>
+<div class="stat-item stagger-item"><span class="stat-num">6</span><span class="stat-label">Consultorios</span></div>
 <div class="stat-item stagger-item"><span class="stat-num">2</span><span class="stat-label">Sedes</span></div>
-<div class="stat-item stagger-item"><span class="stat-num">8–21hs</span><span class="stat-label">Horario</span></div>
+<div class="stat-item stagger-item"><span class="stat-num">8 - 21hs</span><span class="stat-label">Horario</span></div>
 <div class="stat-item stagger-item"><span class="stat-num">100%</span><span class="stat-label">Equipado</span></div>
 </div>
 <section id="consultorios">
 <div class="section-header fade-up">
 <div class="section-tag">Nuestros espacios</div>
-<h2>Galería de consultorios</h2>
+<h2>Consultorios</h2>
 <p>Espacios luminosos, equipados y listos para usar</p>
 </div>
 
 <div class="gallery-grid">
 <div class="gallery-item">
-<img alt="Consultorio I" loading="lazy" onclick="openModal(this.src)" src="./img/51.jpeg">
+<img alt="Consultorio 51" loading="lazy" onclick="openModal('51',1)" src="./img/51/1.jpeg">
 <div class="gallery-caption">Consultorio 51</div>
 </div>
 <div class="gallery-item">
-<img alt="Consultorio 2" loading="lazy" onclick="openModal(this.src)" src="./img/52.jpeg">
+<img alt="Consultorio 52" loading="lazy" onclick="openModal('52',1)" src="./img/52/1.jpeg">
 <div class="gallery-caption">Consultorio 52</div>
 </div>
 <div class="gallery-item">
-<img alt="Consultorio F" loading="lazy" onclick="openModal(this.src)" src="./img/53.jpeg">
+<img alt="Consultorio 53" loading="lazy" onclick="openModal('53',1)" src="./img/53/1.jpeg">
 <div class="gallery-caption">Consultorio 53</div>
 </div>
 <div class="gallery-item">
-<img alt="Consultorio J" loading="lazy" onclick="openModal(this.src)" src="./img/61.jpeg">
+<img alt="Consultorio 61" loading="lazy" onclick="openModal('61',1)" src="./img/61/1.jpeg">
 <div class="gallery-caption">Consultorio 61</div>
 </div>
 <div class="gallery-item">
-<img alt="Consultorio K" loading="lazy" onclick="openModal(this.src)" src="./img/62.jpeg"> 
+<img alt="Consultorio 62" loading="lazy" onclick="openModal('62',1)" src="./img/62/1.jpeg">
 <div class="gallery-caption">Consultorio 62</div>
 </div>
 <div class="gallery-item">
-<img alt="Consultorio 5" loading="lazy" onclick="openModal(this.src)" src="./img/63.jpeg">
+<img alt="Consultorio 63" loading="lazy" onclick="openModal('63',1)" src="./img/63/1.jpeg">
 <div class="gallery-caption">Consultorio 63</div>
-
+</div>
+<div class="gallery-item">
+<img alt="Sala de espera · Sede 5" loading="lazy" onclick="openModal('sala-de-espera-5',1)" src="./img/sala-de-espera-5/1.jpeg">
+<div class="gallery-caption">Sala de espera · 5to</div>
+</div>
+<div class="gallery-item">
+<img alt="Sala de espera · Sede 6" loading="lazy" onclick="openModal('sala-de-espera-6',1)" src="./img/sala-de-espera-6/1.jpeg">
+<div class="gallery-caption">Sala de espera · 6to</div>
 </div>
 </div>
 </section>
-<div class="modal" id="modal" onclick="closeModal()">
+<div class="modal" id="modal">
 <button class="modal-close" onclick="closeModal()">✕</button>
-<img alt="Foto ampliada" id="modalImg"/>
+<button class="modal-nav modal-prev" onclick="modalNav(-1)">&#8592;</button>
+<div class="modal-content">
+  <img alt="Foto ampliada" id="modalImg"/>
+  <div class="modal-counter" id="modalCounter"></div>
+</div>
+<button class="modal-nav modal-next" onclick="modalNav(1)">&#8594;</button>
 </div>
 <div class="wave-divider" style="background:var(--cream);">
 <svg preserveaspectratio="none" viewbox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg">
@@ -112,14 +129,16 @@
 <ul class="equip-numbered">
 <li class="stagger-item"><span class="equip-icon-sm">❄️</span><span class="equip-name">Climatización</span></li>
 <li class="stagger-item"><span class="equip-icon-sm">📶</span><span class="equip-name">WiFi de alta velocidad</span></li>
-<li class="stagger-item"><span class="equip-icon-sm">🌞</span><span class="equip-name">Luz natural</span></li>
-<li class="stagger-item"><span class="equip-icon-sm">💡</span><span class="equip-name">Luz de emergencia</span></li>
+<li class="stagger-item"><span class="equip-icon-sm">🌞</span><span class="equip-name">Luz natural y de emergencia</span></li>
+<li class="stagger-item"><span class="equip-icon-sm">🪣</span><span class="equip-name">Limpieza y mantenimiento</span></li>
+<li class="stagger-item"><span class="equip-icon-sm">♿</span><span class="equip-name">Acceso para silla de ruedas</span></li>
 </ul>
 <ul class="equip-numbered">
 <li class="stagger-item"><span class="equip-icon-sm">🪑</span><span class="equip-name">Sala de espera</span></li>
 <li class="stagger-item"><span class="equip-icon-sm">☕</span><span class="equip-name">Coffee break</span></li>
+<li class="stagger-item"><span class="equip-icon-sm">🗄️</span><span class="equip-name">Espacio de guardado</span></li>
 <li class="stagger-item"><span class="equip-icon-sm">📹</span><span class="equip-name">Videovigilancia</span></li>
-<li class="stagger-item"><span class="equip-icon-sm">🔇</span><span class="equip-name">Privacidad acústica</span></li>
+<li class="stagger-item"><span class="equip-icon-sm"> Ψ</span><span class="equip-name">Derivaciones de pacientes</span></li>
 </ul>
 </div>
 </section>
@@ -143,22 +162,22 @@
 <div class="pricing-grid fade-up">
 <div class="pricing-card stagger-item">
 <div class="pricing-icon">⏱️</div>
-<div class="pricing-type">Por hora</div>
-<div class="pricing-desc">Ideal para comenzar o días puntuales. Sin compromiso.</div>
+<div class="pricing-type">Hora</div>
+<div class="pricing-desc">Ideal para comenzar, horas sueltas. Sin compromiso. En cualquier franja horaria.</div>
 <a class="pricing-cta" href="https://wa.me/5491130409543?text=Hola, quiero consultar el precio por hora" target="_blank">Consultar precio</a>
 </div>
 <div class="pricing-card featured stagger-item">
 <div class="badge-pop">Más elegido</div>
 <div class="pricing-icon">📆</div>
-<div class="pricing-type">Módulos / Días</div>
-<div class="pricing-desc">Reservá franjas horarias fijas a la semana. Mejor precio.</div>
-<a class="pricing-cta" href="https://wa.me/5491130409543?text=Hola, quiero consultar alquiler por módulos o días" target="_blank">Consultar precio</a>
+<div class="pricing-type">Módulo</div>
+<div class="pricing-desc">Reservá franjas horarias fijas a la semana. Mínimo 4 horas. Mejor precio.</div>
+<a class="pricing-cta" href="https://wa.me/5491130409543?text=Hola, quiero consultar alquiler por módulo" target="_blank">Consultar precio</a>
 </div>
 <div class="pricing-card stagger-item">
 <div class="pricing-icon">🗓️</div>
-<div class="pricing-type">Mensual</div>
-<div class="pricing-desc">Tu consultorio fijo con la mayor previsibilidad y ahorro.</div>
-<a class="pricing-cta" href="https://wa.me/5491130409543?text=Hola, quiero consultar alquiler mensual" target="_blank">Consultar precio</a>
+<div class="pricing-type">Día</div>
+<div class="pricing-desc">Tu consultorio fijo con la mayor previsibilidad y ahorro. De 8 a 21hs. 13 horas.</div>
+<a class="pricing-cta" href="https://wa.me/5491130409543?text=Hola, quiero consultar alquiler por día" target="_blank">Consultar precio</a>
 </div>
 </div>
 </section>
@@ -180,7 +199,7 @@
 <div class="section-header fade-up">
 <div class="section-tag">Ubicaciones</div>
 <h2>Nuestras sedes</h2>
-<p>Bien ubicadas, cerca del transporte público</p>
+<p>Excelente ubicación, Lanusita. Cerca de la estación</p>
 </div>
 <div class="sedes-grid fade-up">
 <div class="sede-card">
@@ -194,7 +213,7 @@
 </div>
 <div class="transporte-bar fade-up">
 <h4>🚌 Transporte cercano</h4>
-<p><strong>Colectivos:</strong> 160, 112, 58, 57, 60</p>
+<p><strong>Colectivos:</strong> 37, 51, 100, 160, 179</p>
 <p><strong>Tren:</strong> Línea Roca · Estación Lanús</p>
 </div>
 </section>
@@ -228,7 +247,8 @@
 <footer>
 <div class="footer-simple fade-up">
 <div class="logo">CL <span>Consultorios</span> Lanús</div>
-<p class="footer-desc">Espacios profesionales para psicólogos, psiquiatras y terapeutas en Lanús Oeste.</p>
+<p class="footer-desc">Espacios habilitados: profesionales y prepagas en el centro de Lanús Oeste.</p>
+<p class="footer-desc">Seguinos en redes</p>
 <div class="footer-social">
 <a aria-label="Instagram" class="ig" href="https://www.instagram.com/consultorios.alquiler.lanus" target="_blank">
 <svg height="18" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5zm4.25 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zm4.75-.88a1.12 1.12 0 1 1-1.12-1.12 1.12 1.12 0 0 1 1.12 1.12z" fill="white"></path></svg>
