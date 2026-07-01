@@ -4,12 +4,47 @@
 <head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>CL Consultorios Lanús</title>
-<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet"/>
+<title>CL Consultorios Lanús | Alquiler de consultorios en Lanús Oeste</title>
+<meta name="description" content="Alquiler de consultorios por hora, módulo, día o mes en Lanús Oeste. Espacios equipados y habilitados para psicólogos, nutricionistas, psicopedagogas y más, a metros de la estación Lanús."/>
+<link rel="canonical" href="https://consultorios-lanus.vercel.app/"/>
+
+<meta property="og:type" content="business.business"/>
+<meta property="og:title" content="CL Consultorios Lanús"/>
+<meta property="og:description" content="Alquiler de consultorios por hora, módulo, día o mes en Lanús Oeste. Espacios equipados y habilitados para profesionales de la salud."/>
+<meta property="og:image" content="https://consultorios-lanus.vercel.app/img/51/1.webp"/>
+<meta property="og:url" content="https://consultorios-lanus.vercel.app/"/>
+<meta name="twitter:card" content="summary_large_image"/>
+
+<link rel="preconnect" href="https://fonts.googleapis.com"/>
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&amp;family=DM+Sans:wght@300;400;500&amp;display=swap" rel="stylesheet"/>
 
-<link href="styles.css" rel="stylesheet"/></head>
+<link rel="preload" as="image" href="./img/63/1.webp" media="(max-width: 700px)" fetchpriority="high"/>
+<link rel="preload" as="image" href="./img/51/1.webp" media="(min-width: 701px)" fetchpriority="high"/>
+
+<link href="styles.css" rel="stylesheet"/>
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "CL Consultorios Lanús",
+  "image": "https://consultorios-lanus.vercel.app/img/51/1.webp",
+  "telephone": "+5491130409543",
+  "address": {
+    "@type": "PostalAddress",
+    "streetAddress": "2 de Mayo 3175",
+    "addressLocality": "Lanús Oeste",
+    "addressRegion": "Buenos Aires",
+    "addressCountry": "AR"
+  },
+  "openingHours": "Mo-Su 08:00-21:00",
+  "url": "https://consultorios-lanus.vercel.app/"
+}
+</script>
+</head>
 <body>
+<a class="skip-link" href="#main-content">Saltar al contenido principal</a>
 <header>
 <div class="logo">CL <span>Consultorios</span> Lanús</div>
 <nav id="mainNav">
@@ -19,13 +54,13 @@
 <a href="#reserva">Precios</a>
 <a href="#sedes">Sedes</a>
 <a href="#contacto">Contacto</a>
-<a class="nav-cta" href="https://wa.me/5491130409543?text=Hola, quiero consultar para reservar consultorios" target="_blank">Reservar</a>
+<a class="nav-cta" href="https://wa.me/5491130409543?text=Hola, quiero consultar para reservar consultorios" target="_blank" rel="noopener noreferrer">Reservar</a>
 </nav>
-<button class="hamburger" id="hamburger" onclick="toggleMenu()"><span></span><span></span><span></span></button>
+<button class="hamburger" id="hamburger" onclick="toggleMenu()" aria-label="Abrir menú" aria-expanded="false" aria-controls="drawer"><span></span><span></span><span></span></button>
 </header>
 <div class="drawer-overlay" id="drawerOverlay" onclick="closeMenu()"></div>
-<div class="drawer" id="drawer">
-<button class="drawer-close" onclick="closeMenu()">✕</button>
+<div class="drawer" id="drawer" role="dialog" aria-modal="true" aria-label="Menú de navegación">
+<button class="drawer-close" onclick="closeMenu()" aria-label="Cerrar menú">✕</button>
 <nav class="drawer-nav">
 <a href="#inicio" onclick="closeMenu()">Inicio</a>
 <a href="#consultorios" onclick="closeMenu()">Consultorios</a>
@@ -37,17 +72,17 @@
 <div class="drawer-sep"></div>
 <a href="#contacto" onclick="closeMenu()">Contacto</a>
 <div class="drawer-sep"></div>
-<a class="drawer-cta" href="https://wa.me/5491130409543?text=Hola, quiero consultar para reservar consultorios" onclick="closeMenu()" target="_blank">Reservar</a>
+<a class="drawer-cta" href="https://wa.me/5491130409543?text=Hola, quiero consultar para reservar consultorios" onclick="closeMenu()" target="_blank" rel="noopener noreferrer">Reservar</a>
 </nav>
 </div>
-<section class="hero" id="inicio">
+<section class="hero" id="inicio" tabindex="-1" aria-label="Inicio"><span id="main-content"></span>
 <div class="hero-content">
 <div class="hero-badge">Lanús Oeste · Lanusita</div>
 <h1>Alquiler de consultorios</h1>
 <p style="font-weight:500;">Hora · Módulo · Día · Mes</p>
 <p >Habilitados para psicólogos, psiquiátras, psicopedagogas, nutricionistas, depilación definitiva, etc</p>
 <div class="hero-btns">
-<a class="btn-primary" href="https://wa.me/5491130409543?text=Hola, quiero consultar por la disponibilidad de los consultorios" target="_blank">Consultar disponibilidad</a>
+<a class="btn-primary" href="https://wa.me/5491130409543?text=Hola, quiero consultar por la disponibilidad de los consultorios" target="_blank" rel="noopener noreferrer">Consultar disponibilidad</a>
 <a class="btn-outline" href="#consultorios">Ver consultorios</a>
 </div>
 </div>
@@ -100,14 +135,14 @@
 </div>
 </div>
 </section>
-<div class="modal" id="modal">
-<button class="modal-close" onclick="closeModal()">✕</button>
-<button class="modal-nav modal-prev" onclick="modalNav(-1)">&#8592;</button>
+<div class="modal" id="modal" role="dialog" aria-modal="true" aria-label="Galería de fotos ampliada">
+<button class="modal-close" onclick="closeModal()" aria-label="Cerrar foto ampliada">✕</button>
+<button class="modal-nav modal-prev" onclick="modalNav(-1)" aria-label="Foto anterior">&#8592;</button>
 <div class="modal-content">
-  <img alt="Foto ampliada" id="modalImg"/>
+  <img alt="" id="modalImg"/>
   <div class="modal-counter" id="modalCounter"></div>
 </div>
-<button class="modal-nav modal-next" onclick="modalNav(1)">&#8594;</button>
+<button class="modal-nav modal-next" onclick="modalNav(1)" aria-label="Foto siguiente">&#8594;</button>
 </div>
 <div class="wave-divider" style="background:var(--cream);">
 <svg preserveaspectratio="none" viewbox="0 0 1440 60" xmlns="http://www.w3.org/2000/svg">
@@ -127,18 +162,18 @@
 </div>
 <div class="equip-two-cols fade-up">
 <ul class="equip-numbered">
-<li class="stagger-item"><span class="equip-icon-sm">❄️</span><span class="equip-name">Climatización</span></li>
-<li class="stagger-item"><span class="equip-icon-sm">📶</span><span class="equip-name">WiFi de alta velocidad</span></li>
-<li class="stagger-item"><span class="equip-icon-sm">🌞</span><span class="equip-name">Luz natural y de emergencia</span></li>
-<li class="stagger-item"><span class="equip-icon-sm">🪣</span><span class="equip-name">Limpieza y mantenimiento</span></li>
-<li class="stagger-item"><span class="equip-icon-sm">♿</span><span class="equip-name">Acceso para silla de ruedas</span></li>
+<li class="stagger-item"><span class="equip-icon-sm" aria-hidden="true">❄️</span><span class="equip-name">Climatización</span></li>
+<li class="stagger-item"><span class="equip-icon-sm" aria-hidden="true">📶</span><span class="equip-name">WiFi de alta velocidad</span></li>
+<li class="stagger-item"><span class="equip-icon-sm" aria-hidden="true">🌞</span><span class="equip-name">Luz natural y de emergencia</span></li>
+<li class="stagger-item"><span class="equip-icon-sm" aria-hidden="true">🪣</span><span class="equip-name">Limpieza y mantenimiento</span></li>
+<li class="stagger-item"><span class="equip-icon-sm" aria-hidden="true">♿</span><span class="equip-name">Acceso para silla de ruedas</span></li>
 </ul>
 <ul class="equip-numbered">
-<li class="stagger-item"><span class="equip-icon-sm">🪑</span><span class="equip-name">Sala de espera</span></li>
-<li class="stagger-item"><span class="equip-icon-sm">☕</span><span class="equip-name">Coffee break</span></li>
-<li class="stagger-item"><span class="equip-icon-sm">🗄️</span><span class="equip-name">Espacio de guardado</span></li>
-<li class="stagger-item"><span class="equip-icon-sm">📹</span><span class="equip-name">Videovigilancia</span></li>
-<li class="stagger-item"><span class="equip-icon-sm"> Ψ</span><span class="equip-name">Derivaciones de pacientes</span></li>
+<li class="stagger-item"><span class="equip-icon-sm" aria-hidden="true">🪑</span><span class="equip-name">Sala de espera</span></li>
+<li class="stagger-item"><span class="equip-icon-sm" aria-hidden="true">☕</span><span class="equip-name">Coffee break</span></li>
+<li class="stagger-item"><span class="equip-icon-sm" aria-hidden="true">🗄️</span><span class="equip-name">Espacio de guardado</span></li>
+<li class="stagger-item"><span class="equip-icon-sm" aria-hidden="true">📹</span><span class="equip-name">Videovigilancia</span></li>
+<li class="stagger-item"><span class="equip-icon-sm" aria-hidden="true"> Ψ</span><span class="equip-name">Derivaciones de pacientes</span></li>
 </ul>
 </div>
 </section>
@@ -164,20 +199,20 @@
 <div class="pricing-icon">⏱️</div>
 <div class="pricing-type">Hora</div>
 <div class="pricing-desc">Ideal para comenzar, horas sueltas. Sin compromiso. En cualquier franja horaria.</div>
-<a class="pricing-cta" href="https://wa.me/5491130409543?text=Hola, quiero consultar el precio por hora" target="_blank">Consultar precio</a>
+<a class="pricing-cta" href="https://wa.me/5491130409543?text=Hola, quiero consultar el precio por hora" target="_blank" rel="noopener noreferrer">Consultar precio</a>
 </div>
 <div class="pricing-card featured stagger-item">
 <div class="badge-pop">Más elegido</div>
 <div class="pricing-icon">📆</div>
 <div class="pricing-type">Módulo</div>
 <div class="pricing-desc">Reservá franjas horarias fijas a la semana. Mínimo 4 horas. Mejor precio.</div>
-<a class="pricing-cta" href="https://wa.me/5491130409543?text=Hola, quiero consultar alquiler por módulo" target="_blank">Consultar precio</a>
+<a class="pricing-cta" href="https://wa.me/5491130409543?text=Hola, quiero consultar alquiler por módulo" target="_blank" rel="noopener noreferrer">Consultar precio</a>
 </div>
 <div class="pricing-card stagger-item">
 <div class="pricing-icon">🗓️</div>
 <div class="pricing-type">Día/Mes</div>
 <div class="pricing-desc">Tu consultorio fijo con la mayor previsibilidad y ahorro. De 8 a 21hs. 13 horas.</div>
-<a class="pricing-cta" href="https://wa.me/5491130409543?text=Hola, quiero consultar alquiler por día" target="_blank">Consultar precio</a>
+<a class="pricing-cta" href="https://wa.me/5491130409543?text=Hola, quiero consultar alquiler por día" target="_blank" rel="noopener noreferrer">Consultar precio</a>
 </div>
 </div>
 </section>
@@ -203,12 +238,12 @@
 </div>
 <div class="sedes-grid fade-up">
 <div class="sede-card">
-<div class="sede-header"><i class="fa-solid fa-location-dot"></i><h3>2 de Mayo 3175</h3></div>
-<iframe src="https://www.google.com/maps?q=2+de+Mayo+3175+Lanus+Oeste+Buenos+Aires&amp;output=embed" title="Sede 2 de Mayo"></iframe>
+<div class="sede-header"><svg class="icon-pin" width="16" height="16" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M215.7 499.2C267 435 384 279.4 384 192 384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2 12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg><h3>2 de Mayo 3175</h3></div>
+<iframe src="https://www.google.com/maps?q=2+de+Mayo+3175+Lanus+Oeste+Buenos+Aires&amp;output=embed" title="Sede 2 de Mayo" loading="lazy"></iframe>
 </div>
 <div class="sede-card">
-<div class="sede-header"><i class="fa-solid fa-location-dot"></i><h3>Piñeiro 247</h3><span class="badge-coming">Próximamente</span></div>
-<iframe src="https://www.google.com/maps?q=pi%C3%B1eiro+247+lanus+oeste+buenos+aires&amp;output=embed" title="Sede Piñeiro"></iframe>
+<div class="sede-header"><svg class="icon-pin" width="16" height="16" viewBox="0 0 384 512" fill="currentColor" aria-hidden="true"><path d="M215.7 499.2C267 435 384 279.4 384 192 384 86 298 0 192 0S0 86 0 192c0 87.4 117 243 168.3 307.2 12.3 15.3 35.1 15.3 47.4 0zM192 128a64 64 0 1 1 0 128 64 64 0 1 1 0-128z"/></svg><h3>Piñeiro 247</h3><span class="badge-coming">Próximamente</span></div>
+<iframe src="https://www.google.com/maps?q=pi%C3%B1eiro+247+lanus+oeste+buenos+aires&amp;output=embed" title="Sede Piñeiro" loading="lazy"></iframe>
 </div>
 </div>
 <div class="transporte-bar fade-up">
@@ -235,11 +270,14 @@
 </div>
 <div class="contact-wrap fade-up">
 <form onsubmit="enviarWhatsApp(event)">
-<input id="nombre" placeholder="Nombre completo" required="" type="text"/>
-<input id="profesion" placeholder="Profesión / Especialidad" type="text"/>
-<textarea id="mensaje" placeholder="¿En qué te podemos ayudar?" required=""></textarea>
+<label class="sr-only" for="nombre">Nombre completo</label>
+<input id="nombre" name="nombre" placeholder="Nombre completo" required="" type="text"/>
+<label class="sr-only" for="profesion">Profesión / Especialidad</label>
+<input id="profesion" name="profesion" placeholder="Profesión / Especialidad" type="text"/>
+<label class="sr-only" for="mensaje">¿En qué te podemos ayudar?</label>
+<textarea id="mensaje" name="mensaje" placeholder="¿En qué te podemos ayudar?" required=""></textarea>
 <button class="btn-primary" style="width:100%;font-size:15px;" type="submit">
-<i class="fab fa-whatsapp" style="margin-right:8px;"></i>Enviar por WhatsApp
+<svg width="16" height="16" viewBox="0 0 32 32" fill="currentColor" aria-hidden="true" style="margin-right:8px;vertical-align:-2px;"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.493.655 4.835 1.799 6.863L2 30l7.331-1.775A13.93 13.93 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.6a11.54 11.54 0 0 1-5.86-1.594l-.42-.25-4.352 1.054 1.084-4.234-.274-.435A11.56 11.56 0 0 1 4.4 16C4.4 9.593 9.593 4.4 16 4.4S27.6 9.593 27.6 16 22.407 27.6 16 27.6zm6.34-8.64c-.347-.174-2.055-1.012-2.374-1.128-.319-.116-.551-.174-.783.174-.232.347-.899 1.128-1.102 1.36-.203.232-.406.26-.753.087-.347-.174-1.464-.54-2.788-1.718-1.03-.917-1.726-2.05-1.929-2.396-.203-.347-.022-.535.153-.707.157-.155.347-.405.52-.608.174-.203.232-.347.347-.578.116-.232.058-.434-.029-.608-.087-.174-.783-1.888-1.073-2.585-.283-.678-.57-.586-.783-.597l-.667-.011c-.232 0-.608.087-.927.434-.319.347-1.217 1.189-1.217 2.9s1.246 3.364 1.42 3.596c.174.232 2.452 3.742 5.94 5.247.83.358 1.478.572 1.983.732.833.265 1.591.228 2.19.138.668-.1 2.055-.84 2.345-1.652.29-.812.29-1.508.203-1.652-.086-.145-.318-.232-.666-.406z"/></svg>Enviar por WhatsApp
       </button>
 </form>
 </div>
@@ -250,7 +288,7 @@
 <p class="footer-desc">Espacios habilitados para profesionales y prepagas en el centro de Lanús Oeste.</p>
 <p class="footer-desc">Seguinos en redes</p>
 <div class="footer-social">
-<a aria-label="Instagram" class="ig" href="https://www.instagram.com/consultorios.alquiler.lanus" target="_blank">
+<a aria-label="Instagram" class="ig" href="https://www.instagram.com/consultorios.alquiler.lanus" target="_blank" rel="noopener noreferrer">
 <svg height="18" viewbox="0 0 24 24" width="18" xmlns="http://www.w3.org/2000/svg"><path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2zm0 2A3.75 3.75 0 0 0 4 7.75v8.5A3.75 3.75 0 0 0 7.75 20h8.5A3.75 3.75 0 0 0 20 16.25v-8.5A3.75 3.75 0 0 0 16.25 4h-8.5zm4.25 3.5A4.5 4.5 0 1 1 7.5 12 4.5 4.5 0 0 1 12 7.5zm0 2A2.5 2.5 0 1 0 14.5 12 2.5 2.5 0 0 0 12 9.5zm4.75-.88a1.12 1.12 0 1 1-1.12-1.12 1.12 1.12 0 0 1 1.12 1.12z" fill="white"></path></svg>
 </a>
 </div>
@@ -260,7 +298,7 @@
 </div>
 </footer>
 <a aria-label="Volver arriba" class="back-to-top" href="#inicio" id="backToTop">↑</a>
-<a aria-label="WhatsApp" class="whatsapp" href="https://wa.me/5491130409543?text=Hola, quiero consultar por el alquiler de los consultorios" target="_blank">
+<a aria-label="WhatsApp" class="whatsapp" href="https://wa.me/5491130409543?text=Hola, quiero consultar por el alquiler de los consultorios" target="_blank" rel="noopener noreferrer">
 <svg height="28" viewbox="0 0 32 32" width="28" xmlns="http://www.w3.org/2000/svg"><path d="M16 2C8.268 2 2 8.268 2 16c0 2.493.655 4.835 1.799 6.863L2 30l7.331-1.775A13.93 13.93 0 0 0 16 30c7.732 0 14-6.268 14-14S23.732 2 16 2zm0 25.6a11.54 11.54 0 0 1-5.86-1.594l-.42-.25-4.352 1.054 1.084-4.234-.274-.435A11.56 11.56 0 0 1 4.4 16C4.4 9.593 9.593 4.4 16 4.4S27.6 9.593 27.6 16 22.407 27.6 16 27.6zm6.34-8.64c-.347-.174-2.055-1.012-2.374-1.128-.319-.116-.551-.174-.783.174-.232.347-.899 1.128-1.102 1.36-.203.232-.406.26-.753.087-.347-.174-1.464-.54-2.788-1.718-1.03-.917-1.726-2.05-1.929-2.396-.203-.347-.022-.535.153-.707.157-.155.347-.405.52-.608.174-.203.232-.347.347-.578.116-.232.058-.434-.029-.608-.087-.174-.783-1.888-1.073-2.585-.283-.678-.57-.586-.783-.597l-.667-.011c-.232 0-.608.087-.927.434-.319.347-1.217 1.189-1.217 2.9s1.246 3.364 1.42 3.596c.174.232 2.452 3.742 5.94 5.247.83.358 1.478.572 1.983.732.833.265 1.591.228 2.19.138.668-.1 2.055-.84 2.345-1.652.29-.812.29-1.508.203-1.652-.086-.145-.318-.232-.666-.406z" fill="white"></path></svg>
 </a>
 

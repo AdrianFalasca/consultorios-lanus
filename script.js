@@ -11,7 +11,9 @@ function openModal(folder, index) {
 }
 
 function updateModal() {
-  document.getElementById("modalImg").src = `./img/${modalFolder}/${modalIndex}.webp`;
+  const img = document.getElementById("modalImg");
+  img.src = `./img/${modalFolder}/${modalIndex}.webp`;
+  img.alt = `Foto ${modalIndex} de ${modalTotal} - ${modalFolder.replace(/-/g, ' ')}`;
   document.getElementById("modalCounter").textContent = `${modalIndex} / ${modalTotal}`;
 }
 
@@ -40,14 +42,20 @@ document.getElementById("modal").addEventListener("click", function(e) {
 function toggleMenu() {
   const drawer = document.getElementById("drawer");
   const overlay = document.getElementById("drawerOverlay");
-  drawer.classList.toggle("open");
+  const hamburger = document.getElementById("hamburger");
+  const isOpen = drawer.classList.toggle("open");
   overlay.classList.toggle("open");
-  document.body.style.overflow = drawer.classList.contains("open") ? "hidden" : "";
+  document.body.style.overflow = isOpen ? "hidden" : "";
+  hamburger.setAttribute("aria-expanded", isOpen ? "true" : "false");
+  hamburger.setAttribute("aria-label", isOpen ? "Cerrar menú" : "Abrir menú");
 }
 function closeMenu() {
   document.getElementById("drawer").classList.remove("open");
   document.getElementById("drawerOverlay").classList.remove("open");
   document.body.style.overflow = "";
+  const hamburger = document.getElementById("hamburger");
+  hamburger.setAttribute("aria-expanded", "false");
+  hamburger.setAttribute("aria-label", "Abrir menú");
 }
 
 function enviarWhatsApp(e) {
