@@ -11,7 +11,7 @@ function openModal(folder, index) {
 }
 
 function updateModal() {
-  document.getElementById("modalImg").src = `./img/${modalFolder}/${modalIndex}.jpeg`;
+  document.getElementById("modalImg").src = `./img/${modalFolder}/${modalIndex}.webp`;
   document.getElementById("modalCounter").textContent = `${modalIndex} / ${modalTotal}`;
 }
 

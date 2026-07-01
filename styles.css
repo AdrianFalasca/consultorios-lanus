@@ -41,7 +41,7 @@ nav a:hover { background:var(--sand); color:var(--dark); }
 
   background-image:
   linear-gradient(rgba(0, 0, 0, 0.314), rgba(0, 0, 0, 0.16)),
-    url("./img/51/1.jpeg");
+    url("./img/51/1.webp");
   background-size:cover;
   background-position:center;
   background-repeat:no-repeat;
@@ -180,7 +180,7 @@ footer { background:var(--dark); color:rgba(255,255,255,0.7); padding:clamp(40px
   .hero{
     background-image:
       linear-gradient(rgba(0, 0, 0, 0.232), rgba(0, 0, 0, 0.16)),
-      url("./img/63/1.jpeg");
+      url("./img/63/1.webp");
   }
 
   #reserva { padding-left:0; padding-right:0; }
