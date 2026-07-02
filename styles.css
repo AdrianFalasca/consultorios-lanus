@@ -8,7 +8,7 @@ html { scroll-behavior: smooth; }
 
 .sr-only { position:absolute; width:1px; height:1px; padding:0; margin:-1px; overflow:hidden; clip:rect(0,0,0,0); white-space:nowrap; border:0; }
 
-.skip-link { position:absolute; top:-40px; left:8px; background:var(--dark); color:white; padding:10px 16px; border-radius:6px; z-index:10001; text-decoration:none; transition:top 0.2s; }
+.skip-link { position:absolute; top:-50px; left:8px; background:var(--dark); color:white; padding:10px 16px; border-radius:6px; z-index:10001; text-decoration:none; transition:top 0.2s; }
 .skip-link:focus { top:8px; }
 
 a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
