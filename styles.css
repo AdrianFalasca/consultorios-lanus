@@ -69,11 +69,11 @@ nav a:hover { background:var(--sand); color:var(--dark); }
 .btn-outline { background:transparent; color:white; padding:clamp(12px,3vw,14px) clamp(22px,6vw,32px); border-radius:6px; text-decoration:none; font-weight:500; font-size:clamp(14px,3vw,15px); border:1px solid rgba(255,255,255,0.6); transition:0.2s; }
 
 /* ── STATS ── */
-.stats-bar { background:var(--dark); display:flex; justify-content:center; flex-wrap:wrap; }
-.stat-item { padding:22px clamp(16px,5vw,40px); text-align:center; border-right:1px solid rgba(255,255,255,0.1); flex:1; min-width:130px; }
+.stats-bar { background:var(--dark); display:flex; justify-content:center; flex-wrap:nowrap; }
+.stat-item { padding:clamp(14px,4vw,22px) clamp(8px,3vw,40px); text-align:center; border-right:1px solid rgba(255,255,255,0.1); flex:1; min-width:0; }
 .stat-item:last-child { border-right:none; }
-.stat-num { font-family:'Cormorant Garamond',serif; font-size:clamp(1.5rem,5vw,2rem); color:var(--terracotta); font-weight:700; display:block; }
-.stat-label { color:rgba(255,255,255,0.6); font-size:clamp(10px,2.2vw,12px); text-transform:uppercase; letter-spacing:1px; }
+.stat-num { font-family:'Cormorant Garamond',serif; font-size:clamp(1.15rem,4.5vw,2rem); color:var(--terracotta); font-weight:700; display:block; }
+.stat-label { color:rgba(255,255,255,0.6); font-size:clamp(8.5px,2vw,12px); text-transform:uppercase; letter-spacing:1px; }
 
 /* ── SECTIONS ── */
 section { padding:clamp(56px,9vw,90px) 20px; }
@@ -127,8 +127,8 @@ section { padding:clamp(56px,9vw,90px) 20px; }
 
 /* ── PRECIOS ── */
 #reserva { background:var(--cream); }
-.pricing-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(220px,1fr)); gap:20px; max-width:900px; margin:0 auto; }
-.pricing-card { background:white; border:1px solid var(--sand); border-radius:14px; padding:clamp(28px,5vw,36px) clamp(20px,5vw,28px); text-align:center; transition:0.25s; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.14); }
+.pricing-grid { display:grid; grid-template-columns:repeat(3,1fr); gap:20px; max-width:900px; margin:0 auto; }
+.pricing-card { background:white; border:1px solid var(--sand); border-radius:14px; padding:clamp(28px,5vw,36px) clamp(20px,5vw,28px); text-align:center; transition:0.25s; position:relative; box-shadow:0 8px 32px rgba(0,0,0,0.14); max-width:280px; margin:0 auto; width:100%; }
 .pricing-card:hover { transform:translateY(-4px); box-shadow:0 10px 32px rgba(0,0,0,0.1); }
 .pricing-card.featured { border-color:var(--terracotta); background:var(--terracotta); color:white; }
 .badge-pop { position:absolute; top:-12px; left:50%; transform:translateX(-50%); background:var(--dark); color:white; font-size:11px; font-weight:600; letter-spacing:1px; text-transform:uppercase; padding:4px 14px; border-radius:20px; white-space:nowrap; }
@@ -141,14 +141,14 @@ section { padding:clamp(56px,9vw,90px) 20px; }
 
 /* ── SEDES ── */
 #sedes { background:var(--warm-white); }
-.sedes-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(320px,1fr)); gap:32px; max-width:900px; margin:0 auto 40px; }
-.sede-card { background:white; border:1px solid var(--sand); border-radius:14px; overflow:hidden; box-shadow:0 8px 32px rgba(0,0,0,0.14); }
+.sedes-grid { display:grid; grid-template-columns:1fr 1fr; gap:32px; max-width:900px; margin:0 auto 40px; }
+.sede-card { background:white; border:1px solid var(--sand); border-radius:14px; overflow:hidden; box-shadow:0 8px 32px rgba(0,0,0,0.14); max-width:420px; margin:0 auto; width:100%; }
 .sede-header { padding:18px clamp(16px,4vw,24px); border-bottom:1px solid var(--sand); display:flex; align-items:center; gap:12px; }
 .sede-header i { color:var(--terracotta); font-size:clamp(16px,3.5vw,18px); }
 .sede-header h3 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.05rem,4vw,1.2rem); font-weight:700; }
 .badge-coming { margin-left:auto; background:var(--sand); color:var(--mid); font-size:12px; padding:3px 10px; border-radius:20px; }
 .sede-card iframe { width:100%; height:220px; border:0; display:block; }
-.transporte-bar { text-align:center; background:white; border:1px solid var(--sand); border-radius:12px; padding:24px clamp(20px,5vw,32px); max-width:600px; margin:0 auto; box-shadow:0 8px 32px rgba(0,0,0,0.14); }
+.transporte-bar { text-align:center; background:white; border:1px solid var(--sand); border-radius:12px; padding:24px clamp(20px,5vw,32px); max-width:clamp(280px, 90vw, 600px); margin:0 auto; box-shadow:0 8px 32px rgba(0,0,0,0.14); }
 .transporte-bar h4 { font-family:'Cormorant Garamond',serif; font-size:clamp(1.05rem,4vw,1.2rem); font-weight:700; margin-bottom:10px; }
 .transporte-bar p { font-size:clamp(13px,3vw,14px); color:var(--mid); }
 .transporte-bar p+p { margin-top:4px; }
@@ -186,22 +186,11 @@ footer { background:var(--dark); color:rgba(255,255,255,0.7); padding:clamp(40px
 /* ── MOBILE ── */
 @media (max-width:700px) {
   header { padding:12px 20px; }
-  nav { display:none !important; }
-  .drawer-nav { display:flex !important; }
-  .hamburger { display:flex; }
   .hero{
     background-image:
       linear-gradient(rgba(0, 0, 0, 0.232), rgba(0, 0, 0, 0.16)),
       url("./img/63/1.webp");
   }
-
-  #reserva { padding-left:0; padding-right:0; }
-  #reserva .section-header { padding:0 20px; margin-bottom:32px; }
-  .pricing-grid { display:flex; flex-wrap:nowrap; overflow-x:scroll; -webkit-overflow-scrolling:touch; scroll-snap-type:x mandatory; scrollbar-width:none; gap:14px; padding:20px 16px 28px; box-sizing:border-box; width:calc(100% - 32px); margin:0 auto; align-items:stretch; }
-  .pricing-grid::-webkit-scrollbar { display:none; }
-  .pricing-card { flex:0 0 80%; width:80%; min-width:0; scroll-snap-align:start; transform:none!important; margin:0!important; box-sizing:border-box; }
-  .pricing-card.featured { transform:none!important; margin:0!important; }
-  .badge-pop { top:-14px; white-space:nowrap; font-size:10px; }
 
   #consultorios { padding-left:0; padding-right:0; }
   #consultorios .section-header { padding:0 20px; margin-bottom:32px; }
@@ -214,13 +203,12 @@ footer { background:var(--dark); color:rgba(255,255,255,0.7); padding:clamp(40px
   #sedes .section-header { padding:0 20px; margin-bottom:32px; }
   .sedes-grid { display:flex; flex-wrap:nowrap; overflow-x:scroll; -webkit-overflow-scrolling:touch; scroll-snap-type:x mandatory; scrollbar-width:none; gap:14px; padding:4px 0 20px; width:calc(100% - 32px); margin:0 auto; box-sizing:border-box; }
   .sedes-grid::-webkit-scrollbar { display:none; }
-  .sede-card { flex:0 0 85%; width:85%; min-width:0; scroll-snap-align:start; }
+  .sede-card { flex:0 0 85%; width:85%; max-width:none; min-width:0; scroll-snap-align:start; }
 
   .equip-split { grid-template-columns:1fr; gap:28px; }
   .equip-split-img { aspect-ratio:4/3; height:auto; order:2; }
   .equip-icon-list { order:1; }
 
-  .transporte-bar { max-width:80%; }
   footer { padding:40px 20px 0; }
   .footer-grid { grid-template-columns:1fr 1fr; gap:24px; }
   .footer-col:first-child { grid-column:1/3; }
@@ -228,7 +216,23 @@ footer { background:var(--dark); color:rgba(255,255,255,0.7); padding:clamp(40px
   .contact-wrap { padding:28px 20px; }
 }
 
-@media (min-width:701px) and (min-height:500px) {
+@media (max-width:800px) {
+  #reserva { padding-left:0; padding-right:0; }
+  #reserva .section-header { padding:0 20px; margin-bottom:32px; }
+  .pricing-grid { display:flex; flex-wrap:nowrap; overflow-x:scroll; -webkit-overflow-scrolling:touch; scroll-snap-type:x mandatory; scrollbar-width:none; gap:14px; padding:20px 16px 28px; box-sizing:border-box; width:calc(100% - 32px); margin:0 auto; align-items:stretch; }
+  .pricing-grid::-webkit-scrollbar { display:none; }
+  .pricing-card { flex:0 0 80%; width:80%; max-width:none; min-width:0; scroll-snap-align:start; transform:none!important; margin:0!important; box-sizing:border-box; }
+  .pricing-card.featured { transform:none!important; margin:0!important; }
+  .badge-pop { top:-14px; white-space:nowrap; font-size:10px; }
+}
+
+@media (max-width:1000px) {
+  nav { display:none !important; }
+  .drawer-nav { display:flex !important; }
+  .hamburger { display:flex; }
+}
+
+@media (min-width:1001px) and (min-height:500px) {
   .drawer, .drawer-overlay { display:none!important; }
   .hamburger { display:none!important; }
 }
@@ -316,6 +320,7 @@ footer { background:var(--dark); color:rgba(255,255,255,0.7); padding:clamp(40px
   .pricing-card {
     flex: 0 0 36% !important;
     width: 36% !important;
+    max-width: none !important;
     scroll-snap-align: start !important;
     transform: none !important;
     margin: 0 !important;
